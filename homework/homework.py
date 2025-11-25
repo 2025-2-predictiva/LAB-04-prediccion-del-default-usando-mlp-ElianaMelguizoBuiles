@@ -253,7 +253,7 @@ def save_metrics(model, x_train, y_train, x_test, y_test):
         'recall': recall_score(y_train, y_train_pred, zero_division=0),
         'f1_score': f1_score(y_train, y_train_pred, zero_division=0)  
         },
-         # Métricas test
+        # Métricas test
         {
         'type': 'metrics',
         'dataset': 'test',
@@ -263,13 +263,13 @@ def save_metrics(model, x_train, y_train, x_test, y_test):
         'f1_score': f1_score(y_test, y_test_pred, zero_division=0)
         },
         # Matriz confusión train
-      {
+        {
         "type": "cm_matrix",
         "dataset": "train",
         "true_0": {"predicted_0": int(cm_train[0][0]), "predicted_1": int(cm_train[0][1])},
         "true_1": {"predicted_0": int(cm_train[1][0]), "predicted_1": int(cm_train[1][1])}
     },
-     # Matriz confusión train
+    # Matriz confusión train
     {
         "type": "cm_matrix",
         "dataset": "test",
